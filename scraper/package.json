@@ -4,10 +4,9 @@
   "description": "A web scraper to find competitions, promotions, and events",
   "main": "scraper.js",
   "scripts": {
-    "scrape": "node scraper/scraper.js",
-    "publish": "node scraper/publisher.js",
-    "publish-lib": "node scraper/lnkbio-publisher.js",
-    "stylist": "node scraper/stylist.js"
+    "scrape": "node src/scraper.js",
+    "publish": "node src/publisher.js",
+    "publish-lib": "node src/lnkbio-publisher.js"
   },
   "dependencies": {
     "aws-sdk": "^2.1569.0",

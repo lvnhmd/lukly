@@ -6,8 +6,7 @@ const uploadImageToS3 = require('./uploadToAWS');
 const processImage = require('./processImage');
 require('dotenv').config();
 
-const uri = process.env.MONGODB_URI;
-const client = new MongoClient(uri);
+const client = new MongoClient(process.env.MONGODB_URI);
 const dbName = process.env.DB_NAME;
 const collectionName = process.env.COLLECTION_NAME;
 
