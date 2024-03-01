@@ -4,16 +4,22 @@
   "description": "A web scraper to find competitions, promotions, and events",
   "main": "scraper.js",
   "scripts": {
-    "start": "node scraper/scraper.js",
+    "scrape": "node scraper/scraper.js",
+    "publish": "node scraper/publisher.js",
+    "publish-lib": "node scraper/lnkbio-publisher.js",
     "stylist": "node scraper/stylist.js"
   },
   "dependencies": {
+    "aws-sdk": "^2.1569.0",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.9",
+    "dotenv": "^16.4.5",
     "fb": "^2.0.0",
     "image-downloader": "^4.3.0",
+    "mongodb": "^6.3.0",
     "natural": "^6.5.0",
-    "puppeteer": "^22.3.0"
+    "puppeteer": "^22.3.0",
+    "sharp": "^0.33.2"
   },
   "author": "",
   "license": "ISC"
