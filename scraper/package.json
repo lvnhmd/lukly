@@ -5,7 +5,6 @@
   "main": "scraper.js",
   "scripts": {
     "scrape": "node src/scraper.js",
-    "publish": "node src/publisher.js",
     "publish-lib": "node src/lnkbio-publisher.js"
   },
   "dependencies": {

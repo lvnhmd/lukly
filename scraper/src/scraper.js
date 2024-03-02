@@ -4,6 +4,7 @@ const path = require("path");
 const { MongoClient } = require("mongodb");
 const uploadImageToS3 = require('./uploadToAWS');
 const processImage = require('./processImage');
+const updateAndPostCompetitions = require('./updateAndPostCompetitions');
 require('dotenv').config();
 
 const client = new MongoClient(process.env.MONGODB_URI);
@@ -113,4 +114,5 @@ const collectionName = process.env.COLLECTION_NAME;
   await browser.close();
   fs.writeFileSync("results.json", JSON.stringify(results, null, 2));
   console.log("Results saved. Duplicates and expired competitions excluded.");
+  updateAndPostCompetitions();
 })();
